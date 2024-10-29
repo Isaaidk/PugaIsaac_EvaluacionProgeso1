@@ -20,3 +20,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+.imagen {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 130px; 
+    left: 100px; 
+}
+
+.boton {
+    
+}

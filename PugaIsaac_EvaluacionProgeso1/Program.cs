@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using PugaIsaac_EvaluacionProgeso1.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<PugaIsaac_EvaluacionProgeso1Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PugaIsaac_EvaluacionProgeso1Context") ?? throw new InvalidOperationException("Connection string 'PugaIsaac_EvaluacionProgeso1Context' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
